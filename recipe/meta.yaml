@@ -1,5 +1,5 @@
 {% set name = "sheldon" %}
-{% set version = "0.7.4" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/rossmacarthur/sheldon/archive/{{ version }}.tar.gz
-  sha256: 5d8ecd432a99852d416580174be7ab8f29fe9231d9804f0cc26ba2b158f49cdf
+  sha256: 71c6c27b30d1555e11d253756a4fce515600221ec6de6c06f9afb3db8122e5b5
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   build:
