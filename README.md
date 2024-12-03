@@ -3,7 +3,7 @@ About sheldon-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sheldon-feedstock/blob/main/LICENSE.txt)
 
-Home: https://sheldon.cli.rs
+Home: https://sheldon.cli.rs/
 
 Package license: MIT
 
