@@ -1,23 +1,23 @@
-{% set name = "sheldon" %}
-{% set version = "0.8.0" %}
+context:
+  version: 0.8.0
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: sheldon
+  version: ${{ version }}
 
 source:
-  url: https://github.com/rossmacarthur/sheldon/archive/{{ version }}.tar.gz
+  url: https://github.com/rossmacarthur/sheldon/archive/${{ version }}.tar.gz
   sha256: 71c6c27b30d1555e11d253756a4fce515600221ec6de6c06f9afb3db8122e5b5
 
 build:
   number: 0
-  skip: true  # [win]
+  skip: win
 
 requirements:
   build:
-    - {{ compiler('rust') }}
-    - {{ compiler('c') }}
-    - {{ stdlib('c') }}
+    - ${{ compiler('rust') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
     - cargo-bundle-licenses
     - pkg-config
   host:
@@ -26,18 +26,18 @@ requirements:
     - openssl
     - zlib
 
-test:
-  commands:
-    - sheldon --help
+tests:
+  - script:
+      - sheldon --help
 
 about:
-  home: https://sheldon.cli.rs
   license: MIT
   license_file:
     - LICENSE-MIT
     - THIRDPARTY.yml
   summary: Fast, configurable, shell plugin manager
-  dev_url: https://github.com/rossmacarthur/sheldon
+  homepage: https://sheldon.cli.rs
+  repository: https://github.com/rossmacarthur/sheldon
 
 extra:
   recipe-maintainers:
