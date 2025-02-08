@@ -1,5 +1,5 @@
 context:
-  version: 0.8.0
+  version: "0.8.1"
 
 package:
   name: sheldon
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/rossmacarthur/sheldon/archive/${{ version }}.tar.gz
-  sha256: 71c6c27b30d1555e11d253756a4fce515600221ec6de6c06f9afb3db8122e5b5
+  sha256: fa0aade40a2e2f397f5f8734a0bc28391147ed6ad75c087f8ab7db7ce1e49b88
 
 build:
   number: 0
